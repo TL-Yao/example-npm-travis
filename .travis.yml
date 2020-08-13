@@ -8,3 +8,4 @@ after_success:
   - curl -s https://scripts.scantist.com/staging/scantist-bom-detect.jar --output scantist-bom-detect.jar
   - java -jar scantist-bom-detect.jar --debug
   - cat dependency-tree.json
+  - cat scantist_report.log
