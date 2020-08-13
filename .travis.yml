@@ -7,6 +7,6 @@ after_success:
   #- bash <(curl -s https://scripts.scantist.com/staging/ci-travis.sh)
   - export SCANTIST_IMPORT_URL="https://api-staging.scantist.io/ci-scan/"
   - curl -s https://scripts.scantist.com/staging/scantist-bom-detect.jar --output scantist-bom-detect.jar
-  - java -jar scantist-bom-detect.jar --debug
+  - java -jar -Xmx1024m scantist-bom-detect.jar --debug
   - cat dependency-tree.json
   - cat scantist_report.log
