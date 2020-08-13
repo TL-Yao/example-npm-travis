@@ -4,11 +4,11 @@ node_js:
   - "6"
 
 after_success:
-  #- bash <(curl -s https://scripts.scantist.com/staging/ci-travis.sh)
-  - rm scantist-bom-detect.jar
-  - export SCANTIST_IMPORT_URL="https://api-staging.scantist.io/ci-scan/"
-  - curl -s https://scripts.scantist.com/staging/scantist-bom-detect.jar --output scantist-bom-detect.jar
-  - md5deep scantist-bom-detect.jar
-  - java -jar -Xmx1024m scantist-bom-detect.jar --debug
-  - cat dependency-tree.json
-  - cat scantist_report.log
+  - bash <(curl -s https://scripts.scantist.com/staging/ci-travis.sh)
+#   - rm scantist-bom-detect.jar
+#   - export SCANTIST_IMPORT_URL="https://api-staging.scantist.io/ci-scan/"
+#   - curl -s https://scripts.scantist.com/staging/scantist-bom-detect.jar --output scantist-bom-detect.jar
+#   - md5deep scantist-bom-detect.jar
+#   - java -jar -Xmx1024m scantist-bom-detect.jar --debug
+#   - cat dependency-tree.json
+#   - cat scantist_report.log
